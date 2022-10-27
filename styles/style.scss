@@ -1,0 +1,78 @@
+@import './_reset.scss';
+@import '../icons/style.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #F8F9FA;
+    header {
+        padding: 2.5rem;
+        background-color: #d32323;
+        color: white;
+        h1 {
+            text-align: center;
+            font-size: 2.4rem;
+        }
+    }
+    section {
+        h2 {
+            font-size: 2.2rem;
+            padding: 1rem;
+            text-align: center;
+        }
+    }
+    .links {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 1.2rem;
+        .opdrachten {
+            margin-bottom: 1rem;
+            background-color: #fff;
+            border: 1px solid #DEE2E6;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px #DEE2E6;
+            &:hover {
+                h3 {
+                    border-bottom: 1px solid #DEE2E6;  
+                }
+                ul {
+                    max-height: 500px;
+                }
+            }
+            h3 {
+                font-size: 2rem;
+                margin: 1rem;
+                margin-bottom: 0;
+                padding-bottom: 1rem;
+                transition: all 500ms;
+                border-bottom: 0px solid #DEE2E6;
+            }
+            ul {
+                max-height: 0;
+                overflow: hidden;
+                border-radius: 0 0 5px 5px;
+                transition: max-height 500ms;
+                li {
+                    padding: 1rem;
+                    color: #d32323;
+                    background-color: #fff;
+                    transition: all 300ms;
+                    &:hover {
+                        background-color: #d32323;
+                        color: white;   
+                    }
+                    a {
+                        display: block;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        margin-top: 5rem;
+        text-align: center;
+    }
+}
+

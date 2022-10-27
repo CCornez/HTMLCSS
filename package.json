@@ -1,0 +1,16 @@
+{
+  "name": "opdrachten",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./index.html",
+    "deploy": "surge ./dist fe-cc-syntraHTMLCyril2022.surge.sh"
+  },
+  "author": "Cyril Cornez",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "surge": "^0.23.1"
+  }
+}
