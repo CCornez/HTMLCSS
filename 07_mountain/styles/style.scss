@@ -1,0 +1,120 @@
+@import './base/reset';
+@import './base/fonts';
+
+body {
+    font-family: 'Raleway', sans-serif;
+    main, section {
+        .content {
+            margin: 0 auto;
+            padding: 4rem 0;
+            width: 61%;
+            height: 100%;
+        }
+    }
+    main {
+        height: 100vh;
+        background-image: url(../images/background.jpg);
+        background-position: center;
+        .content header, .content header figure, .content header nav{
+            display: flex;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            header {
+                color: white;
+                figure {
+                    margin-right: auto;
+                    figcaption {
+                        margin-left: 2.4rem;
+                        font-size: 3.4rem;
+                    }
+                }
+                nav {
+                    a {
+                        margin-left: 4.6rem;
+                        font-size: 1.4rem;
+                        font-family: 'Montserrat', sans-serif;
+                        font-weight: 300;
+                        transition: all 300ms;
+                        &.active, &:hover {
+                            color: #C7B299;
+                        }
+                    }
+                    img {
+                        margin-left: 10.8rem;
+                    }
+                }
+            }
+            .text, .circles {
+                align-self: center;
+            }
+            .text {
+                max-width: 550px;
+                text-align: center;
+                color: white;
+                h1 {
+                    margin-bottom: 1.2rem;
+                    font-size: 3.6rem;
+                    font-weight: 500;
+                }
+                h2 {
+                    margin-bottom: 1.5rem;
+                    font-size: 5.2rem;
+                    font-weight: 800;
+                }
+                p {
+                    margin-bottom: 4.7rem;
+                    font-size: 1.6rem;
+                    line-height: 2.5rem;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                }
+                button {
+                    padding: 1.7rem 5.3rem;
+                    font-size: 1.4rem;
+                    font-weight: 800;
+                    background-color: #998675;
+                    box-shadow: 0 3px #736357;
+                    border-radius: 3px;
+                    text-transform: uppercase;
+                    transition: all 300ms;
+                    &:hover {
+                        background-color: #736357;
+                        box-shadow: 0 3px #998675;
+                    }
+                }
+            }
+            .circles {
+                display: flex;
+                align-items: center;
+                .circle {
+                    &:not(:first-child){
+                        margin-left: 1rem;
+                    }
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 11px;
+                        height: 11px;
+                        background-color: #fff;
+                        color: #fff;
+                        border-radius: 50%;
+                        transition: all 500ms;
+                        background-clip: padding-box;
+                        border: 2px solid transparent;
+                    }
+                    &.active::before, &:hover::before {
+                        border-color: #998675;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        background-color: green;
+    }
+}
