@@ -1,5 +1,6 @@
 @import './base/reset';
 @import './base/fonts';
+@import '../icons/style.css';
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -23,10 +24,15 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding-top: 3.5rem;
             header {
                 color: white;
                 figure {
                     margin-right: auto;
+                    a {
+                        font-size: 5.5rem;
+                        transform: translateY(0.5rem);
+                    }
                     figcaption {
                         margin-left: 2.4rem;
                         font-size: 3.4rem;
@@ -42,9 +48,12 @@ body {
                         &.active, &:hover {
                             color: #C7B299;
                         }
-                    }
-                    img {
-                        margin-left: 10.8rem;
+                        &:last-child {
+                            margin-left: 10.8rem;
+                            font-size: 2.4rem;
+                        transform: translateY(0.2rem);
+
+                        }
                     }
                 }
             }
@@ -99,12 +108,11 @@ body {
                         display: block;
                         width: 11px;
                         height: 11px;
-                        background-color: #fff;
-                        color: #fff;
-                        border-radius: 50%;
-                        transition: all 500ms;
-                        background-clip: padding-box;
                         border: 2px solid transparent;
+                        border-radius: 50%;
+                        background-clip: padding-box;
+                        background-color: #fff;
+                        transition: all 500ms;
                     }
                     &.active::before, &:hover::before {
                         border-color: #998675;
@@ -115,6 +123,74 @@ body {
         }
     }
     section {
-        background-color: green;
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 8.1rem 0 11.2rem;
+            text-align: center;
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            width: 22.5%;
+            figure, h1 {
+                color: #555555;
+            }
+            figure {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 2.7rem;
+                flex-grow: 1;
+                font-size: 4.7rem;
+                transition: all 300ms;
+            }
+            h1 {
+                margin-bottom: 1.5rem;
+                font-size: 2.2rem;
+                font-weight: 600;
+                transition: all 300ms;
+            }
+            p {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 300;
+                color: #8c8c8c;
+            }
+            &:nth-child(2) figure {
+                font-size: 4rem;
+            }
+            &:nth-child(3) figure {
+                font-size: 4.4rem;
+            }
+            &:nth-child(4) figure {
+                font-size: 3.6rem;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -29px;
+                left: calc(50% - 35px);
+                height: 3px;
+                width: 70px;
+                background-color: #C7B299;
+                opacity: 0.2;
+                transition: all 300ms;
+            }
+            &.active, &:hover {
+                figure {
+                    color: #C7B299;   
+                }
+                h1 {
+                    color: #C7B299;   
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }
