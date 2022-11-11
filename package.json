@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "posthtml-include": "^1.7.4",
     "surge": "^0.23.1"
   }
 }
