@@ -2,7 +2,9 @@
 @import '../icons/style.css';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-// index
+/**************************************************
+index page
+**************************************************/
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -47,15 +49,21 @@ body {
         }
     }
     main {
-        height: calc(100vh - 7.5rem);
+        // 100vh - nav height
+        min-height: calc(100vh - 7.5rem);
         background-image: url("../images/background.jpg");
         background-size: cover;
         background-position: top center;
+        background-attachment: fixed;
         position: relative;
     }
 }
 
-.assignments {
+/**************************************************
+assignments and challenges page
+**************************************************/
+
+.assignments, .challenges {
     main {
         .content {
             display: grid;
