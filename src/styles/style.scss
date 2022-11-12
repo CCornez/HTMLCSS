@@ -80,8 +80,6 @@ section {
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 2rem;
             padding: 5%;
-            // padding + nav height
-            padding-top: calc(5% + 7.5rem);
             .card {
                 border-radius: 10px;
                 background-color: #2C2C2C;
