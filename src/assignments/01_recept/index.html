@@ -8,14 +8,12 @@
     <link rel="stylesheet" href="./styles/style.scss" />
   </head>
   <body>
-    <div class="bar">
-      <a class="back" href="../../assignments.html">
-        <svg class="icon icon-reply">
-          <use xlink:href="../../icons/symbol-defs.svg#icon-reply"></use>
-        </svg>
-        back
-      </a>
-    </div>
+    <include
+      src="./components/buttonBack.html"
+      locals='{
+      "href": "../../assignments.html"
+  }'
+    ></include>
     <h1>Snel recept om hummus te maken</h1>
     <div class="intro">
       <img

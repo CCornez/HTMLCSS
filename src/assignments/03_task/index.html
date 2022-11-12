@@ -9,14 +9,12 @@
   </head>
   <body>
     <main>
-      <div class="bar">
-        <a class="back" href="../../assignments.html">
-          <svg class="icon icon-reply">
-            <use xlink:href="../../icons/symbol-defs.svg#icon-reply"></use>
-          </svg>
-          back
-        </a>
-      </div>
+      <include
+        src="./components/buttonBack.html"
+        locals='{
+      "href": "../../assignments.html"
+  }'
+      ></include>
       <div class="article">
         <img src="https://loremflickr.com/190/107" alt="" />
         <div class="text">
