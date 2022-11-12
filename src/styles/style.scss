@@ -19,7 +19,7 @@ body {
             align-items: center;
             padding: 2.5rem;
             background-color: #2C2C2C;
-            color: white;
+            color: #F8F9FA;
             &>a {
                 position: absolute;
                 left: 0;
@@ -49,7 +49,7 @@ body {
             }
         }
     }
-    main {
+    main, section {
         position: relative;
         min-height: 100vh;
         background-image: url("../images/background.jpg");
@@ -63,8 +63,16 @@ body {
 assignments and challenges page
 **************************************************/
 
-.assignments, .challenges {
-    main {
+section {
+    &.assignments, &.challenges {
+        background-image: url("../images/background_assignments.jpg");
+        h1 {
+            padding: 1rem 0;
+            font-size: 3rem;
+            background-color: #2C2C2C;
+            color: #F8F9FA;
+            text-align: center;
+        }
         .content {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -75,7 +83,7 @@ assignments and challenges page
             .card {
                 border-radius: 10px;
                 background-color: #2C2C2C;
-                color: white;
+                color: #F8F9FA;
                 box-shadow: 2px 2px 2px 0px black;
                 transition: all 300ms;
                 img {
@@ -101,4 +109,21 @@ assignments and challenges page
             }
         }
     }
+}
+
+
+/**************************************************
+assignments page
+**************************************************/
+
+section.assignments {
+    background-position: bottom center;
+}
+
+/**************************************************
+challenges page
+**************************************************/
+
+section.challenges {
+    background-image: url("../images/background_challenges.jpg");
 }
