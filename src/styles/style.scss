@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 /**************************************************
-index page
+index
 **************************************************/
 
 body {
@@ -13,6 +13,7 @@ body {
         width: 100%;
         z-index: 1;
         nav {
+            height: 7.5rem;
             position: relative;
             display: flex;
             justify-content: center;
@@ -38,7 +39,7 @@ body {
                 display: flex;
                 gap: 1rem;
                 margin-right: 1rem;
-                li a {
+                li button {
                     display: block;
                     padding: 1rem;
                     transition: 300ms;
@@ -60,10 +61,11 @@ body {
 }
 
 /**************************************************
-assignments and challenges page
+assignments and challenges
 **************************************************/
 
 section {
+    scroll-margin-top: 7.5rem;
     &.assignments, &.challenges {
         background-image: url("../images/background_assignments.jpg");
         h1 {
@@ -113,7 +115,7 @@ section {
 
 
 /**************************************************
-assignments page
+assignments
 **************************************************/
 
 section.assignments {
@@ -121,7 +123,7 @@ section.assignments {
 }
 
 /**************************************************
-challenges page
+challenges
 **************************************************/
 
 section.challenges {
