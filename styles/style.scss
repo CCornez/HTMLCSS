@@ -8,32 +8,33 @@ index page
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    background-color: #F8F9FA;
     header {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2.5rem;
-        background-color: #2C2C2C;
-        color: white;
-        &>a {
-            position: absolute;
-            left: 0;
-            img {
-                height: 7.5rem;
-            }
-        }
-        h1 {
-            display: inline-block;
-            text-align: center;
-            font-size: 2.4rem;
-        }
+        position: fixed;
+        width: 100%;
+        z-index: 1;
         nav {
-            position: absolute;
-            right: 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem;
+            background-color: #2C2C2C;
+            color: white;
+            &>a {
+                position: absolute;
+                left: 0;
+                img {
+                    height: 7.5rem;
+                }
+            }
+            h1 {
+                display: inline-block;
+                text-align: center;
+                font-size: 2.4rem;
+            }
             ul {
+                position: absolute;
+                right: 0;
                 display: flex;
                 gap: 1rem;
                 margin-right: 1rem;
@@ -49,13 +50,12 @@ body {
         }
     }
     main {
-        // 100vh - nav height
-        min-height: calc(100vh - 7.5rem);
+        position: relative;
+        min-height: 100vh;
         background-image: url("../images/background.jpg");
         background-size: cover;
         background-position: top center;
         background-attachment: fixed;
-        position: relative;
     }
 }
 
@@ -70,6 +70,8 @@ assignments and challenges page
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 2rem;
             padding: 5%;
+            // padding + nav height
+            padding-top: calc(5% + 7.5rem);
             .card {
                 border-radius: 10px;
                 background-color: #2C2C2C;
