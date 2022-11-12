@@ -1,0 +1,72 @@
+@import '../../../styles/base/reset';
+@import '../../../icons/style.css';
+
+body {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: arial;
+    main, section {
+        img {
+            width: 190px;
+            height: 107px;
+            border-radius: 3px;
+        }   
+        h2 {
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            color: #148a8a;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: #777;
+        }
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        width: 69%;
+        .article {
+            display: flex;
+            gap: 10px;
+        }
+    }
+    section {
+        width: 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        h1 {
+            font-size: 1.6rem;
+            border: 1px solid #77ae44;
+            padding: 1rem;
+            border-radius: 3px;
+            background-color: #8ac74e;
+            color: white;
+        }
+        .article {
+            img, h2 {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+    .back {
+        margin-bottom: 1rem; 
+        padding: 0.5rem;
+        position:fixed;
+        font-size: 1.6rem;
+        color: transparent;
+        background-color: transparent;
+        border-radius: 5px;
+        transition: all 500ms;
+      }
+      .back:hover {
+        color: rgb(209, 209, 255);
+        background-color: rgb(0, 0, 0);
+      }
+}
