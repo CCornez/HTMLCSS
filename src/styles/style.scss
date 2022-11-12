@@ -18,7 +18,6 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2.5rem;
             background-color: #2C2C2C;
             color: #F8F9FA;
             &>a {
@@ -42,6 +41,7 @@ body {
                 li button {
                     display: block;
                     padding: 1rem;
+                    font-size: 1rem;
                     transition: 300ms;
                     &:hover {
                         color: #e2c521;
@@ -126,4 +126,28 @@ challenges
 
 section.challenges {
     background-image: url("../images/background_challenges.jpg");
+}
+
+/**************************************************
+mobile
+**************************************************/
+
+@media screen and (max-width: 600px) {
+    body header nav {
+        height: 5rem;
+        &>a img {
+            height: 5rem;
+        }
+        h1 {
+            font-size: 1.8rem;
+            // display: none;
+        }
+        ul {
+            display: none;
+            position: inherit;
+            li button{
+                text-align: center;
+            }
+        }
+    }
 }
