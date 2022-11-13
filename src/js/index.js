@@ -1,3 +1,7 @@
+/**
+ * scrollIntoView
+ */
+
 const homeRef = document.querySelector('main');
 const assignmentsRef = document.querySelector('.assignments');
 const challengesRef = document.querySelector('.challenges');
@@ -18,4 +22,16 @@ assignmentsButton.onclick = (e) => {
 challengesButton.onclick = (e) => {
   e.preventDefault();
   challengesRef.scrollIntoView({ behavior: 'smooth' });
+};
+
+/**
+ * navbar mobile
+ */
+
+const navbar = document.querySelector('header nav');
+const navbarArrow = document.querySelector('#navbar-arrow');
+
+navbarArrow.onclick = (e) => {
+  e.preventDefault();
+  navbar.classList.toggle('open');
 };

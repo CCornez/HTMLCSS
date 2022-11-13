@@ -25,6 +25,7 @@ body {
                 left: 0;
                 img {
                     height: 7.5rem;
+                    z-index: 1;
                 }
             }
             h1 {
@@ -38,13 +39,18 @@ body {
                 display: flex;
                 gap: 1rem;
                 margin-right: 1rem;
-                li button {
-                    display: block;
-                    padding: 1rem;
-                    font-size: 1rem;
-                    transition: 300ms;
-                    &:hover {
-                        color: #e2c521;
+                li {
+                    button {
+                        display: block;
+                        padding: 1rem;
+                        font-size: 1rem;
+                        transition: 300ms;
+                        &:hover {
+                            color: #e2c521;
+                        }
+                    }
+                    &:last-child {
+                        display: none;
                     }
                 }
             }
@@ -133,21 +139,77 @@ mobile
 **************************************************/
 
 @media screen and (max-width: 600px) {
-    body header nav {
-        height: 5rem;
-        &>a img {
+    body {
+        header nav {
             height: 5rem;
-        }
-        h1 {
-            font-size: 1.8rem;
-            // display: none;
-        }
-        ul {
-            display: none;
-            position: inherit;
-            li button{
-                text-align: center;
+            flex-direction: column;
+            &>a img {
+                height: 5rem;
             }
+            h1 {
+                width: 100%;
+                height: 2rem;
+                font-size: 1.8rem;
+                overflow: hidden;
+                transform: translateY(0);
+                transition: transform 500ms;
+            }
+            ul {
+                position: static;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                height: 0;
+                margin: 0;
+                overflow: hidden;
+                transition: height 250ms;
+                li {
+                    transition: transform 500ms;
+                    button{
+                        text-align: center;
+                    }
+                    // &:first-child {
+                    //     margin-left: 20%;
+                    // }
+                    &:last-child {
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: calc(50% - 1.5rem);
+                        button {
+                            display: flex;
+                            align-items: center;
+                            height: 3rem;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    &:not(:last-child) {
+                        transform: translateY(5rem);
+                    }
+                }
+            }
+            &.open {
+                h1 {
+                    height: 0;
+                    transform: translateY(-1rem);
+                    transition: height 500ms;
+                }
+                ul {
+                    height: 100%;
+                    li {
+                        display: block;
+                        &:last-child {
+                            transform: rotate(180deg);
+                        }
+                        &:not(:last-child) {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+        section {
+            scroll-margin-top: 5rem;
         }
     }
 }

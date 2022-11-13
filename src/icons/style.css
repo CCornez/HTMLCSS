@@ -14,3 +14,11 @@ Single-colored icons can be modified like so:
   color: red;
 }
 ========================================== */
+
+.icon-arrow-up {
+  width: 0.9285714285714285em;
+}
+
+.icon-arrow-down {
+  width: 0.9285714285714285em;
+}
