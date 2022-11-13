@@ -5,6 +5,7 @@
   "scripts": {
     "start": "rm -r ./dist && parcel ./src/index.html",
     "build": "parcel build ./src/index.html",
+    "develop": "npm run build && surge ./dist fe-cc-develop.surge.sh",
     "deploy": "npm run build && surge ./dist fe-cc-syntraHTMLCyril2022.surge.sh"
   },
   "author": "Cyril Cornez",
