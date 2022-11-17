@@ -213,6 +213,11 @@ mobile
         }
         section {
             scroll-margin-top: 5rem;
+            &.assignments, &.challenges {
+                h1 {
+                    top: 5rem;
+                }
+            }
         }
     }
 }

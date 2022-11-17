@@ -25,6 +25,38 @@ challengesButton.onclick = (e) => {
 };
 
 /**
+ * scroll to previous position
+ */
+
+const assignmentsAndChallengesRef = [...document.querySelectorAll('.card')];
+
+assignmentsAndChallengesRef.map((el) =>
+  el.addEventListener('click', () => {
+    localStorage.setItem('scrollRef', window.pageYOffset);
+  })
+);
+
+localStorage.getItem('scrollRef') &&
+  window.scrollTo(0, localStorage.getItem('scrollRef'));
+
+console.log(assignmentsAndChallengesRef);
+
+// homeButton.onclick = (e) => {
+//   e.preventDefault();
+//   homeRef.scrollIntoView({ behavior: 'smooth' });
+// };
+
+// assignmentsButton.onclick = (e) => {
+//   e.preventDefault();
+//   assignmentsRef.scrollIntoView({ behavior: 'smooth' });
+// };
+
+// challengesButton.onclick = (e) => {
+//   e.preventDefault();
+//   challengesRef.scrollIntoView({ behavior: 'smooth' });
+// };
+
+/**
  * navbar mobile
  */
 
